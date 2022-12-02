@@ -1,0 +1,5 @@
+name: LKT-Core
+version: '${project.version}'
+main: com.github.lockoct.Main
+api-version: 1.19
+authors: [ lockoct ]
