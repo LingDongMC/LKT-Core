@@ -38,6 +38,16 @@ public class Main extends JavaPlugin {
         ColorLogUtil.logSuccess(this, "插件启动成功");
     }
 
+    @Override
+    public void onDisable() {
+        // 关闭定时任务
+        try {
+            StdSchedulerFactory.getDefaultScheduler().shutdown();
+        } catch (SchedulerException e) {
+            ColorLogUtil.logError(Main.plugin, "定时任务关闭失败");
+            e.printStackTrace();
+        }
+    }
 
     public Dao getDao() {
         return dao;
