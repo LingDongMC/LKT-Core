@@ -28,7 +28,7 @@ public abstract class BaseMenu {
         return operationItemPos;
     }
 
-    public void setOptItem(Material material, String title, int index, String optSign) {
+    public ItemStack setOptItem(Material material, String title, int index, String optSign) {
         ItemStack is = new ItemStack(material);
         ItemMeta im = is.getItemMeta();
         assert im != null;
@@ -38,6 +38,7 @@ public abstract class BaseMenu {
         if (StringUtils.isNotBlank(optSign)) {
             operationItemPos.put(index, optSign);
         }
+        return is;
     }
 
     // 填充所有空位为背景物品，必须最后执行
