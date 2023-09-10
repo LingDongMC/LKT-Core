@@ -17,17 +17,38 @@ public abstract class BaseMenu {
     private final Player player;
     private final JavaPlugin plugin;
     private final HashMap<Integer, String> operationItemPos = new HashMap<>();
+    private final HashMap<String, Object> menuContext;
 
-    public BaseMenu(int size, String title, Player player, JavaPlugin plugin) {
+    public BaseMenu(int size, String title, HashMap<String, Object> menuContext, Player player, JavaPlugin plugin) {
         this.inventory = Bukkit.createInventory(null, size, title);
+        this.menuContext = menuContext;
         this.player = player;
         this.plugin = plugin;
     }
 
+    // 获取菜单容器
+    // 用于给菜单放置操作按钮
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    // 获取当前操作菜单的玩家
+    public Player getPlayer() {
+        return player;
+    }
+
+    // 获取菜单上下文
+    // 用于多个菜单之间传递消息
+    public HashMap<String, Object> getMenuContext() {
+        return menuContext;
+    }
+
+    // 获取菜单中所有操作按钮的位置
     public HashMap<Integer, String> getOperationItemPos() {
         return operationItemPos;
     }
 
+    // 设置操作按钮
     public ItemStack setOptItem(Material material, String title, int index, String optSign) {
         ItemStack is = new ItemStack(material);
         ItemMeta im = is.getItemMeta();
@@ -52,6 +73,7 @@ public abstract class BaseMenu {
         }
     }
 
+    // 打开菜单
     public void open(BaseMenuListener listener) {
         // 打开前注册监听器
         Bukkit.getPluginManager().registerEvents(listener, this.plugin);
@@ -60,15 +82,8 @@ public abstract class BaseMenu {
         this.player.openInventory(this.inventory);
     }
 
+    // 关闭菜单
     public void close() {
         this.player.closeInventory();
-    }
-
-    public Inventory getInventory() {
-        return inventory;
-    }
-
-    public Player getPlayer() {
-        return player;
     }
 }

@@ -9,7 +9,6 @@ import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryDragEvent;
 
 public abstract class BaseMenuListener implements Listener {
-
     private final BaseMenu menu;
 
     public BaseMenuListener(BaseMenu menu) {
