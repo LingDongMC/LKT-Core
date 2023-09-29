@@ -1,13 +1,14 @@
 package com.github.lockoct;
 
+import com.github.lockoct.entity.BasePlugin;
 import com.github.lockoct.utils.ColorLogUtil;
 import com.github.lockoct.utils.DatabaseUtil;
-import org.bukkit.plugin.java.JavaPlugin;
+import com.github.lockoct.utils.I18nUtil;
 import org.nutz.dao.Dao;
 import org.quartz.SchedulerException;
 import org.quartz.impl.StdSchedulerFactory;
 
-public class Main extends JavaPlugin {
+public class Main extends BasePlugin {
     public static Main plugin;
 
     private Dao dao;
@@ -15,27 +16,33 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         plugin = this;
+
+        // 保存配置文件
+        saveDefaultConfig();
+
+        // 初始化语言配置
+        I18nUtil.init(this);
+
+        // 连接数据库
         try {
             this.dao = DatabaseUtil.initDB();
             if (this.dao != null) {
-                ColorLogUtil.logSuccess(this, "数据库连接成功");
+                ColorLogUtil.logSuccess(this, I18nUtil.getText(this, "pluginMsg.dbConnectSuccess"));
             }
         } catch (Exception e) {
-            ColorLogUtil.logError(this, "数据库连接失败");
+            ColorLogUtil.logError(this, I18nUtil.getText(this, "pluginMsg.dbConnectFailed"));
             e.printStackTrace();
         }
-        // 保存配置文件
-        saveDefaultConfig();
 
         // 启动定时任务
         try {
             StdSchedulerFactory.getDefaultScheduler().start();
         } catch (SchedulerException e) {
-            ColorLogUtil.logError(Main.plugin, "定时任务启动失败");
+            ColorLogUtil.logError(Main.plugin, I18nUtil.getText(this, "pluginMsg.cronjobStartFailed"));
             e.printStackTrace();
         }
 
-        ColorLogUtil.logSuccess(this, "插件启动成功");
+        ColorLogUtil.logSuccess(this, I18nUtil.getText(this, "pluginMsg.enableSuccess"));
     }
 
     @Override
@@ -44,7 +51,7 @@ public class Main extends JavaPlugin {
         try {
             StdSchedulerFactory.getDefaultScheduler().shutdown();
         } catch (SchedulerException e) {
-            ColorLogUtil.logError(Main.plugin, "定时任务关闭失败");
+            ColorLogUtil.logError(Main.plugin, I18nUtil.getText(this, "pluginMsg.cronjobShutdownFailed"));
             e.printStackTrace();
         }
     }

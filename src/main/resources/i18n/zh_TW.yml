@@ -1,0 +1,14 @@
+pluginMsg:
+  enableSuccess: "插件啟動成功"
+  dbConnectSuccess: "資料庫連接成功"
+  dbConnectFailed: "資料庫連接失敗"
+  cronjobStartFailed: "定時任務啟動失敗"
+  cronjobShutdownFailed: "定時任務關閉失敗"
+  cronjobAddFailed: "定時任務添加失敗"
+  notSupportLangWarning: "玩家 %s 缺少 %s 地區的語言檔案，請聯繫開發者提供支援"
+menu:
+  back: "返回"
+  exit: "退出"
+  prePage: "上一頁：第%s頁"
+  nextPage: "下一頁：第%s頁"
+  pageInfo: "當前 %s / %s 頁"

@@ -1,0 +1,14 @@
+pluginMsg:
+  enableSuccess: "Plugin erfolgreich gestartet"
+  dbConnectSuccess: "Datenbankverbindung erfolgreich hergestellt"
+  dbConnectFailed: "Datenbankverbindung fehlgeschlagen"
+  cronjobStartFailed: "Zeitgesteuerte Aufgabe konnte nicht gestartet werden"
+  cronjobShutdownFailed: "Zeitgesteuerte Aufgabe konnte nicht beendet werden"
+  cronjobAddFailed: "Zeitgesteuerte Aufgabe konnte nicht hinzugefügt werden"
+  notSupportLangWarning: "Dem Spieler %s fehlt die Sprachdatei für die Region %s. Bitte wenden Sie sich an den Entwickler, um Unterstützung zu erhalten"
+menu:
+  back: "Zurück"
+  exit: "Beenden"
+  prePage: "Vorherige Seite: %s"
+  nextPage: "Nächste Seite: %s"
+  pageInfo: "Aktuelle Seite %s / %s"

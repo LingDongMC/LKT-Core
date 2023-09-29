@@ -1,5 +1,7 @@
 package com.github.lockoct.menu;
 
+import com.github.lockoct.Main;
+import com.github.lockoct.utils.I18nUtil;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -60,19 +62,22 @@ public abstract class PageableMenu extends BaseMenu {
 
         // 上一页
         if (this.currentPage > 1) {
-            this.setOptItem(Material.ARROW, "上一页：第" + (this.currentPage - 1) + "页", PAGE_SIZE, "prePage");
+            this.setOptItem(Material.ARROW, I18nUtil.getText(Main.plugin, getPlayer(), "menu.prePage", this.currentPage - 1), PAGE_SIZE, "prePage");
         } else {
             inv.setItem(PAGE_SIZE, null);
         }
 
         // 下一页
         if (this.currentPage < this.totalPage) {
-            this.setOptItem(Material.ARROW, "下一页：第" + (this.currentPage + 1) + "页", 53, "nextPage");
+            this.setOptItem(Material.ARROW, I18nUtil.getText(Main.plugin, getPlayer(), "menu.nextPage", this.currentPage + 1), 53, "nextPage");
         } else {
             inv.setItem(53, null);
         }
 
+        // 退出
+        this.setOptItem(Material.DARK_OAK_DOOR, I18nUtil.getText(Main.plugin, getPlayer(), "menu.exit"), 48, "exit");
+
         // 分页信息
-        this.setOptItem(Material.BOOK, "当前 " + this.currentPage + " / " + this.totalPage + " 页", 49, "pageInfo");
+        this.setOptItem(Material.BOOK, I18nUtil.getText(Main.plugin, getPlayer(), "menu.pageInfo", this.currentPage, this.totalPage), 49, "pageInfo");
     }
 }

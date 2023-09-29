@@ -1,0 +1,14 @@
+pluginMsg:
+  enableSuccess: "Plugin started successfully"
+  dbConnectSuccess: "Database connection successful"
+  dbConnectFailed: "Failed to connect to the database"
+  cronjobStartFailed: "Failed to start cron job"
+  cronjobShutdownFailed: "Failed to shutdown cron job"
+  cronjobAddFailed: "Failed to add cron job"
+  notSupportLangWarning: "The language of Player %s's region is not supported, please contact the developer for support"
+menu:
+  back: "Back"
+  exit: "Exit"
+  prePage: "Previous page: Page %s"
+  nextPage: "Next page: Page %s"
+  pageInfo: "Current page %s / %s"

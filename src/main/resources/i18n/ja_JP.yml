@@ -1,0 +1,14 @@
+pluginMsg:
+  enableSuccess: "プラグインの起動に成功しました"
+  dbConnectSuccess: "データベースへの接続に成功しました"
+  dbConnectFailed: "データベースへの接続に失敗しました"
+  cronjobStartFailed: "定期タスクの開始に失敗しました"
+  cronjobShutdownFailed: "定期タスクの終了に失敗しました"
+  cronjobAddFailed: "定期タスクの追加に失敗しました"
+  notSupportLangWarning: "プレイヤー%sは%s地域の言語ファイルが不足しています。開発者に連絡してサポートを受けてください"
+menu:
+  back: "戻る"
+  exit: "終了"
+  prePage: "前のページ：第%sページ"
+  nextPage: "次のページ：第%sページ"
+  pageInfo: "現在 %s / %s ページ"

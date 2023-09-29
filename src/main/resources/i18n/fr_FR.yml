@@ -1,0 +1,14 @@
+pluginMsg:
+  enableSuccess: "Le plugin démarre avec succès"
+  dbConnectSuccess: "Connexion à la base de données réussie"
+  dbConnectFailed: "Échec de la connexion à la base de données"
+  cronjobStartFailed: "Échec du démarrage de la tâche planifiée"
+  cronjobShutdownFailed: "Échec de l'arrêt de la tâche planifiée"
+  cronjobAddFailed: "Échec de l'ajout de la tâche planifiée"
+  notSupportLangWarning: "Le joueur %s n'a pas le fichier de langue pour la région %s. Veuillez contacter le développeur pour obtenir de l'aide"
+menu:
+  back: "Retour"
+  exit: "Quitter"
+  prePage: "Page précédente : %s"
+  nextPage: "Page suivante : %s"
+  pageInfo: "Page actuelle %s / %s"

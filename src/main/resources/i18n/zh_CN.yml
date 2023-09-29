@@ -1,0 +1,14 @@
+pluginMsg:
+  enableSuccess: "插件启动成功"
+  dbConnectSuccess: "数据库连接成功"
+  dbConnectFailed: "数据库连接失败"
+  cronjobStartFailed: "定时任务启动失败"
+  cronjobShutdownFailed: "定时任务关闭失败"
+  cronjobAddFailed: "定时任务添加失败"
+  notSupportLangWarning: "玩家 %s 缺少 %s 区域的语言文件，请联系开发者提供支持"
+menu:
+  back: "返回"
+  exit: "退出"
+  prePage: "上一页：第%s页"
+  nextPage: "下一页：第%s页"
+  pageInfo: "当前 %s / %s 页"

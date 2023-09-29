@@ -1,0 +1,14 @@
+pluginMsg:
+  enableSuccess: "플러그인 시작 성공"
+  dbConnectSuccess: "데이터베이스 연결 성공"
+  dbConnectFailed: "데이터베이스 연결 실패"
+  cronjobStartFailed: "주기적 작업 시작 실패"
+  cronjobShutdownFailed: "주기적 작업 종료 실패"
+  cronjobAddFailed: "주기적 작업 추가 실패"
+  notSupportLangWarning: "플레이어 %s은(는) %s 지역의 언어 파일이 부족합니다. 개발자에게 문의하여 지원을 받으세요."
+menu:
+  back: "뒤로가기"
+  exit: "종료"
+  prePage: "이전 페이지: %s"
+  nextPage: "다음 페이지: %s"
+  pageInfo: "현재 %s / %s 페이지"

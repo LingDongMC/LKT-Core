@@ -14,7 +14,7 @@ public class CronJobUtil {
             JobDetail detail = JobBuilder.newJob(jobClass).withIdentity(name, group).build();
             scheduler.scheduleJob(detail, trigger);
         } catch (SchedulerException e) {
-            ColorLogUtil.logError(Main.plugin, "定时任务添加失败");
+            ColorLogUtil.logError(Main.plugin, I18nUtil.getText(Main.plugin, "pluginMsg.cronjobAddFailed"));
             e.printStackTrace();
         }
     }
