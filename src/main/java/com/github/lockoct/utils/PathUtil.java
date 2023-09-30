@@ -2,7 +2,6 @@ package com.github.lockoct.utils;
 
 
 import com.github.lockoct.entity.BasePlugin;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Enumeration;

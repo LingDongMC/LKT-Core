@@ -17,6 +17,7 @@ public abstract class BaseMenu {
     private final Player player;
     private final JavaPlugin plugin;
     private final HashMap<Integer, String> operationItemPos = new HashMap<>();
+
     private final HashMap<String, Object> menuContext;
 
     public BaseMenu(int size, String title, HashMap<String, Object> menuContext, Player player, JavaPlugin plugin) {
@@ -44,6 +45,7 @@ public abstract class BaseMenu {
     }
 
     // 获取菜单中所有操作按钮的位置
+
     public HashMap<Integer, String> getOperationItemPos() {
         return operationItemPos;
     }
