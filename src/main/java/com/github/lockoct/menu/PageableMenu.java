@@ -42,6 +42,9 @@ public abstract class PageableMenu extends BaseMenu {
     }
 
     public void setTotalPage(int totalPage) {
+        if (totalPage <= 0) {
+            totalPage = 1;
+        }
         this.totalPage = totalPage;
     }
 

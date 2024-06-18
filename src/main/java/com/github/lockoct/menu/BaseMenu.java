@@ -52,11 +52,15 @@ public abstract class BaseMenu {
 
     // 设置操作按钮
     public ItemStack setOptItem(Material material, String title, int index, String optSign) {
-        ItemStack is = new ItemStack(material);
-        ItemMeta im = is.getItemMeta();
+        ItemMeta im = Bukkit.getItemFactory().getItemMeta(material);
         assert im != null;
-        im.setDisplayName(title);
-        is.setItemMeta(im);
+        return setOptItem(material, im, title, index, optSign);
+    }
+
+    public ItemStack setOptItem(Material material, ItemMeta itemMeta, String title, int index, String optSign) {
+        ItemStack is = new ItemStack(material);
+        itemMeta.setDisplayName(title);
+        is.setItemMeta(itemMeta);
         inventory.setItem(index, is);
         if (StringUtils.isNotBlank(optSign)) {
             operationItemPos.put(index, optSign);
