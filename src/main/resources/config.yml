@@ -1,6 +1,6 @@
 dataSource:
-  driverName:
-  url:
-  username:
-  password:
-language:
+  driverName: ""
+  url: ""
+  username: ""
+  password: ""
+language: ""
