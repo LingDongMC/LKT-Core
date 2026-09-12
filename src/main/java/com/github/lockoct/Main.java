@@ -23,9 +23,6 @@ public class Main extends BasePlugin {
         // 初始化语言配置
         I18nUtil.init(this);
 
-        // 检查并初始化默认数据库（Sqlite）
-        DatabaseUtil.setDefaultDB();
-
         // 连接数据库
         try {
             this.dao = DatabaseUtil.initDB();
